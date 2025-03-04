@@ -1,21 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useRegisterSW } from 'virtual:pwa-register/react';
 
 const UpdateNotification = () => {
-  const [showUpdate, setShowUpdate] = useState(false);
+  const {
+    needRefresh,
+    updateServiceWorker,
+  } = useRegisterSW();
 
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        setShowUpdate(true);
-      });
-    }
-  }, []);
-
-  const refreshApp = () => {
-    window.location.reload();
-  };
-
-  if (!showUpdate) return null;
+  if (!needRefresh) return null;
 
   return (
     <div
@@ -23,7 +14,7 @@ const UpdateNotification = () => {
     >
       <span>New version available!</span>
       <button
-        onClick={refreshApp}
+        onClick={() => updateServiceWorker(true)}
         className="ml-3 bg-white text-green-600 px-3 py-1 rounded hover:bg-gray-100 transition-colors"
       >
         Update

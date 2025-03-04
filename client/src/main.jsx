@@ -5,6 +5,10 @@ import App from './App';
 import './style.css';
 import './mobile.css';
 import { ApiErrorBoundaryProvider } from './hooks/ApiErrorBoundaryContext';
+import { registerServiceWorker } from './utils/registerSW';
+
+// Register service worker for PWA support
+registerServiceWorker();
 
 const container = document.getElementById('root');
 const root = createRoot(container);

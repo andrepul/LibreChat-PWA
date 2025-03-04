@@ -118,6 +118,28 @@
   - Completely Open-Source & Built in Public  
   - Community-driven development, support, and feedback
 
+## Progressive Web App (PWA)
+
+LibreChat is available as a Progressive Web App, which means you can install it on your device for offline access and improved performance.
+
+### Installing the PWA
+
+1. Visit LibreChat in a supported browser (Chrome, Edge, or Safari on iOS 16.4+)
+2. Look for the install prompt in the address bar or menu
+3. Click "Install" or "Add to Home Screen"
+
+### Offline Support
+
+LibreChat PWA can be used offline for reading previous conversations. Creating new conversations requires an internet connection.
+
+### Benefits of the PWA
+
+- **Installable App**: Add LibreChat to your home screen/desktop with an app icon
+- **Offline Capabilities**: Access previous conversations when offline
+- **Fast Loading**: Cached resources for quicker startup and lower data usage
+- **Better Performance**: App-like experience with smoother transitions
+- **Automatic Updates**: Always get the latest version automatically
+
 [For a thorough review of our features, see our docs here](https://docs.librechat.ai/) 📚
 
 ## 🪶 All-In-One AI Conversations with LibreChat
