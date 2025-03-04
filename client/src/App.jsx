@@ -10,6 +10,7 @@ import { ToastProvider } from './Providers';
 import Toast from './components/ui/Toast';
 import { LiveAnnouncer } from '~/a11y';
 import { router } from './routes';
+import { UpdateNotification, InstallPrompt } from './components/PWA';
 
 const App = () => {
   const { setError } = useApiErrorBoundary();
@@ -36,6 +37,8 @@ const App = () => {
                   <ReactQueryDevtools initialIsOpen={false} position="top-right" />
                   <Toast />
                   <RadixToast.Viewport className="pointer-events-none fixed inset-0 z-[1000] mx-auto my-2 flex max-w-[560px] flex-col items-stretch justify-start md:pb-5" />
+                  <UpdateNotification />
+                  <InstallPrompt />
                 </DndProvider>
               </ToastProvider>
             </RadixToast.Provider>
